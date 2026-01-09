@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: #E2E8F0;
+}
+
+/* Para Chrome, Safari, Edge e Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Para Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: textfield;
+}
+
+body {
+    background: radial-gradient(circle at center, #2D2A81 1%, #0F152A 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    min-width: 100vw;
+    height: 70px;
+    background-color: #141A30;
+    position: fixed;
+    top: 0;
+}
+
+.logo-energy-cost {
+    margin-top: 16px;
+    margin-left: 64px;
+    width: 240px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 40%;
+    height: 795px;
+    margin-top: 60px;
+    background-color: rgba(34, 37, 81, 0.83);
+    border: 6px solid #2A287A;
+    border-radius: 17px;
+    box-shadow: inset 0 0 15px rgba(42, 40, 122, 0.5),
+        0 0 10px #2A287A,
+        0 0 20px #2A287A,
+        0 0 40px rgba(42, 40, 122, 0.6);
+}
+
+.titulo {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.box-one,
+.box-two,
+.box-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.icon-one,
+.icon-two,
+.icon-three {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 21px;
+    margin-bottom: 12px;
+    width: 340px;
+    height: 30px;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-left: 26px;
+}
+
+#select,
+#horas-de-uso,
+#valor-do-kwh {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #7d5fff;
+    border-radius: 12px;
+    background-color: #222640;
+    outline: none;
+    padding-left: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #B9BBBE;
+}
+
+#select {
+    background: linear-gradient(90deg, #2D369D 0%, #643CC6 100%);
+}
+
+#select option {
+    background-color: #1e1e36;
+}
+
+#valor-potencia {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #7d5fff;
+    border-radius: 12px;
+    background-color: #222640;
+    outline: none;
+    padding-left: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #B9BBBE;
+    margin-top: 5px;
+}
+
+#select:focus,
+#valor-potencia:focus,
+#horas-de-uso:focus,
+#valor-do-kwh:focus {
+    box-shadow: 0 0 8px rgba(125, 95, 255, 0.4);
+}
+
+
+h4 {
+    font-size: 1.2rem;
+}
+
+button {
+    width: 400px;
+    height: 70px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #2D369D 0%, #643CC6 100%);
+    margin-top: 27px;
+    margin-bottom: 7px;
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 10px;
+}
+
+.tomada-verde-box,
+.calender-verde-box,
+.banco-verde-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.calender-verde-box {
+    margin: 10px 0;
+}
+
+.tomada-verde,
+.calender-verde,
+.banco-verde {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-verde-one,
+.titulo-verde-two,
+.titulo-verde-three {
+    font-size: 20px;
+}
+
+.numero-verde-one,
+.numero-verde-two,
+.numero-verde-three {
+    color: #A9E06D;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.numero-verde-one {
+    display: flex;
+    align-items: center;
+}
+
+footer,
+p {
+    margin-top: 4px;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    html,
+    body {
+        overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+
+
+    header {
+        position: relative;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo-energy-cost {
+        margin: 10px auto 3px auto;
+        display: block;
+        width: 180px;
+
+    }
+
+    .container {
+        width: 92%;
+        min-width: 92%;
+        height: auto;
+        margin: 5px auto;
+        padding-bottom: 30px;
+        border-width: 3px;
+    }
+
+
+    .titulo {
+        font-size: 1.3rem;
+        padding: 0 10px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .icon-one,
+    .icon-two,
+    .icon-three {
+        width: 100%;
+        margin-left: 0;
+        align-self: center;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+    }
+
+    #select,
+    #valor-potencia,
+    #horas-de-uso,
+    #valor-do-kwh {
+        height: 50px;
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+    button {
+        width: 100%;
+        width: 270px;
+        height: 60px;
+        font-size: 20px;
+        margin: 30px auto 10px auto;
+        display: block;
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    .tomada-verde-box,
+    .calender-verde-box,
+    .banco-verde-box {
+        padding-left: 10px;
+        padding-right: 10px;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .titulo-verde-one,
+    .titulo-verde-two,
+    .titulo-verde-three {
+        font-size: 16px;
+    }
+
+    .numero-verde-one,
+    .numero-verde-two,
+    .numero-verde-three {
+        font-size: 20px;
+    }
+
+    footer {
+        margin-top: 7px;
+        margin-bottom: 23px;
+        text-align: center;
+        font-size: 12px;
+
+    }
+}
+
+
+@media (max-width: 370px) {
+    .titulo {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Energy Cost</title>
+</head>
+
+<body>
+    <header>
+        <img src=".//img/logo.png" alt="Logo" class="logo-energy-cost">
+    </header>
+
+    <main class="container">
+        <h1 class="titulo">Calculadora de Consumo Elétrico</h1>
+
+        <div class="box-one">
+
+            <div class="icon-one">
+                <img src="./img/tomada.png" alt="tomada" class="tomada">
+                <h4>Selecione o tipo de informação</h4>
+            </div>
+
+            <select id="select">
+                <option value="day" class="option01">Potência em Watts</option>
+                <option value="month" class="option02">Consumo kWh/mês da etiqueta</option>
+            </select>
+
+            <input type="number" id="valor-potencia" placeholder="Digite a potência do aparelho (Ex: 22.8)">
+        </div>
+
+        <div class="box-two">
+            <div class="icon-two">
+                <img src="./img/clock.png" alt="clock" class="clock">
+                <h4>Horas de uso por dia</h4>
+            </div>
+
+            <input type="number" name="horas-de-uso" id="horas-de-uso" placeholder="Ex: 8 (Horas de uso por dia)">
+        </div>
+
+        <div class="box-three">
+            <div class="icon-three">
+                <img src="./img/refresh.png" alt="refresh" class="refresh">
+                <h4>Valor do KWh (R$)</h4>
+            </div>
+
+            <input type="number" name="Valor do KWh (R$)" id="valor-do-kwh" placeholder="Ex: 0.85 (Valor do kWh na sua cidade)">
+        </div>
+
+        <div class="button-one">
+            <button>Calcular consumo</button>
+        </div>
+
+        <div class="result">
+            <div class="tomada-verde-box">
+                <div class="tomada-verde">
+                    <img src=".//img/tomada-verde.png" alt="tomada verde">
+                    <h2 class="titulo-verde-one">Consumo diário:</h2>
+                </div>
+                <h2 class="numero-verde-one">R$ 0,00</h2>
+            </div>
+
+            <div class="calender-verde-box">
+                <div class="calender-verde">
+                    <img src="./img/calendario.png" alt="calender verde">
+                    <h2 class="titulo-verde-two">Consumo semanal:</h2>
+                </div>
+                <h2 class="numero-verde-two">R$ 0,00</h2>
+            </div>
+
+            <div class="banco-verde-box">
+                <div class="banco-verde">
+                    <img src="./img/dados.png" alt="banco verde">
+                    <h2 class="titulo-verde-three">Consumo mensal:</h2>
+                </div>
+                <h2 class="numero-verde-three">R$ 0,00</h2>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <p>© 2024 EnergyCost. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
