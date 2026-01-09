@@ -54,7 +54,8 @@ header {
     align-items: center;
     flex-direction: column;
     min-width: 40%;
-    height: 795px;
+    height: auto;
+    padding-bottom: 40px;
     margin-top: 60px;
     background-color: rgba(34, 37, 81, 0.83);
     border: 6px solid #2A287A;
