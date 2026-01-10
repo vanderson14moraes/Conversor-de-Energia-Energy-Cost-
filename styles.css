@@ -16,8 +16,8 @@ input::-webkit-inner-spin-button {
 html,
 body {
     margin: 0;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100vh;
+
 }
 
 /* Para Firefox */
@@ -31,33 +31,34 @@ body {
     background: radial-gradient(circle at center, #2D2A81 1%, #0F152A 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 header {
-    min-width: 100vw;
+    width: 100%;
     height: 70px;
     background-color: #141A30;
     position: fixed;
     top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .logo-energy-cost {
     margin-top: 16px;
     margin-left: 64px;
-    width: 240px;
+    width: 200px;
 }
 
 .container {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     width: 90%;
-    max-width: 700px;
-    height: 90vh;
-    padding: 40px 20px;
-    margin-top: 60px;
+    max-width: 600px;
+    min-height: 100%;
+    padding: 24px 20px;
+    margin-top: 78px;
     background-color: rgba(34, 37, 81, 0.83);
     border: 6px solid #2A287A;
     border-radius: 17px;
@@ -68,9 +69,9 @@ header {
 }
 
 .titulo {
-    margin-top: 30px;
+    margin-top: 5px;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     word-wrap: break-word;
     margin-bottom: 15px;
     font-weight: 900;
@@ -91,8 +92,8 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-top: 21px;
-    margin-bottom: 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     width: 340px;
     height: 30px;
     justify-content: flex-start;
@@ -104,7 +105,7 @@ header {
 #horas-de-uso,
 #valor-do-kwh {
     width: 100%;
-    height: 60px;
+    height: 48px;
     border: 1px solid #7d5fff;
     border-radius: 12px;
     background-color: #222640;
@@ -115,8 +116,13 @@ header {
     color: #B9BBBE;
 }
 
+input::placeholder {
+    font-size: 16px;
+}
+
 #select {
     background: linear-gradient(90deg, #2D369D 0%, #643CC6 100%);
+    font-size: 16px;
 }
 
 #select option {
@@ -125,7 +131,7 @@ header {
 
 #valor-potencia {
     width: 100%;
-    height: 60px;
+    height: 48px;
     border: 1px solid #7d5fff;
     border-radius: 12px;
     background-color: #222640;
@@ -146,18 +152,30 @@ header {
 
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
+
+.tomada {
+    height: 23px;
+}
+
+.clock,
+.refresh {
+    height: 20px;
+}
+
+
+
 button {
-    width: 400px;
-    height: 70px;
+    width: 270px;
+    height: 50px;
     border: none;
     border-radius: 50px;
     background: linear-gradient(90deg, #2D369D 0%, #643CC6 100%);
     margin-top: 27px;
     margin-bottom: 7px;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s;
@@ -165,13 +183,14 @@ button {
 
 button:hover {
     opacity: 0.8;
+    box-shadow: 0 0 8px rgba(125, 95, 255, 0.4);
 }
 
 .result {
     display: flex;
     flex-direction: column;
     width: 75%;
-    margin-top: 10px;
+    margin-top: 4px;
 }
 
 .tomada-verde-box,
@@ -194,17 +213,23 @@ button:hover {
     gap: 10px;
 }
 
+.tomada-verde img,
+.calender-verde img,
+.banco-verde img {
+    height: 25px;
+}
+
 .titulo-verde-one,
 .titulo-verde-two,
 .titulo-verde-three {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .numero-verde-one,
 .numero-verde-two,
 .numero-verde-three {
     color: #A9E06D;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 700;
 }
 
@@ -216,6 +241,7 @@ button:hover {
 footer,
 p {
     margin-top: 4px;
+    font-size: 0.7rem
 }
 
 
@@ -225,48 +251,52 @@ p {
 
     html,
     body {
-        overflow-y: auto;
-        height: auto;
-        min-height: 100vh;
+        min-height: 100%
     }
 
 
     header {
-        position: relative;
+        position: fixed;
         height: auto;
         padding: 10px 0;
     }
 
     .logo-energy-cost {
-        margin: 10px auto 3px auto;
+        margin: 20px auto 3px auto;
         display: block;
-        width: 180px;
+        width: 200px;
 
     }
 
     .container {
-        width: 92%;
-        min-width: 92%;
-        height: auto;
-        margin: 5px auto;
-        padding-bottom: 30px;
-        border-width: 3px;
-    }
+      width: 95%;
+      max-width: 420px;
+      margin: 110px auto 20px auto;
+      padding: 20px 16px;
+      border: 3px solid #2A287A;
+      border-radius: 17px;
+  }
 
 
     .titulo {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding: 0 10px;
-        margin-top: 20px;
-        margin-bottom: 0;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .box-one,
+    .box-two,
+    .box-three {
+        width: 85%;
     }
 
     .icon-one,
     .icon-two,
     .icon-three {
         width: 100%;
+        max-width: 300px;
         margin-left: 0;
-        align-self: center;
     }
 
     h4 {
@@ -282,12 +312,20 @@ p {
         padding-left: 15px;
     }
 
+
+    input::placeholder {
+        font-size: 12px;
+    }
+
+    #select {
+        font-size: 12px;
+    }
+
     button {
-        width: 100%;
-        width: 270px;
-        height: 60px;
-        font-size: 20px;
-        margin: 30px auto 10px auto;
+        max-width: 220px;
+        height: 50px;
+        font-size: 18px;
+        margin: 25px auto 30px auto;
         display: block;
     }
 
