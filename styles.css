@@ -336,8 +336,8 @@ p {
     .tomada-verde-box,
     .calender-verde-box,
     .banco-verde-box {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
         align-items: center;
         gap: 5px;
     }
@@ -345,13 +345,13 @@ p {
     .titulo-verde-one,
     .titulo-verde-two,
     .titulo-verde-three {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .numero-verde-one,
     .numero-verde-two,
     .numero-verde-three {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     footer {
